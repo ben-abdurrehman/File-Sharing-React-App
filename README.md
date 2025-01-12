@@ -1,6 +1,6 @@
-# Project name
+# File-Sharing-React-App
  
-## This is a simple `Project name`, using `reactjs + vite`, and `tailwind`.
+## This is a simple `File-Sharing-React-App`, using `reactjs + vite`, and `tailwind`.
 
 ### You can easily `download` this repo by reaching the `code button` on the top, after pressing it click on `Download zip`.
 
@@ -18,6 +18,6 @@ Run this Project copy it, and paste it into the browser URL
 localhost:5173
 ```
 
-### Here is some representation of my `Project name` project.
+### Here is some representation of my `File-Sharing-React-App` project.
 
 ![Project `Project name` Screenshot](src/assets/Screenshot.png)
