@@ -1,12 +1,14 @@
 import React, { useCallback } from "react";
 import "./App.css";
-import { useDropzone } from "react-dropzone";
+import { FileUploader } from "react-drag-drop-files";
 
 const App = () => {
-  const onDrop = useCallback((acceptedFiles) => {
-    // Do something with the files
-  }, []);
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const handleChange = (file) => {
+    console.log(file); // Handle the uploaded file here
+  };
+
+  const fileTypes = ["JPG", "PNG", "GIF"];
+
 
   return (
     <div className="w-[90%] h-[90vh] bg-[#00000040] border border-teal-500 p-10 flex items-center content-center rounded-3xl">
@@ -15,17 +17,15 @@ const App = () => {
           Your one stop for file sharing!
         </h1>
         <div className="w-2/5 h-60  rounded-2xl border border-teal-950 hover:border-teal-800 cursor-pointer flex items-center content-center">
-          <div className="p-10" {...getRootProps()}>
-            <input {...getInputProps()} />
-            {isDragActive ? (
-              <p>Drop the files here ...</p>
-            ) : (
-              <p className='text-gray-400 text-xl flex items-center text-center'>Drag 'n' drop some files here, or click to select files</p>
-            )}
+          <div style={{ textAlign: "center", marginTop: "50px" }}>
+            <h1>Upload a File</h1>
+            <FileUploader
+              handleChange={handleChange}
+              name="file"
+              types={fileTypes}
+              multiple={false}
+            />
           </div>
-          {/* <p className='text-gray-400 text-xl flex items-center text-center'>
-            Click to open files or <br/> drag & drop
-          </p> */}
         </div>
       </div>
       <div
