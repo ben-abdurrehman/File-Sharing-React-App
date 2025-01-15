@@ -6,3 +6,25 @@
   align-items: center;
   justify-content: center;
 }
+
+.custom-file-uploader {
+  border: 2px dashed #2dd4bf; /* Green border */ /* Light green background */
+  border-radius: 8px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #2dd4bf;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-file-uploader:hover {
+  border-color: #2dd4bf;
+}
+
+.custom-file-uploader input {
+  display: none; /* Hides the default input element */
+}
